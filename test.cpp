@@ -19,7 +19,7 @@ int main()
 	}
 	fstream qlib;
 	qlib.open("q.lib");
-	string qlibHold, question, answer;
+	string qlibHold, question, answer, answerIn;
 	for (int i = 0; i < line; i++)
 	{
 		getline(qlib, qlibHold);
@@ -31,7 +31,21 @@ int main()
 		answer = qlibHold.substr(qPoint + 1, qlibHold.length() - qPoint);
 
 		cout << "\n> Question " << i + 1 << ": " << question;
-		cout << "\n>     Answer: " << answer << endl;
+		//cout << "\n>     Answer: " << answer << endl;
+
+		cout << "\n>     Answer: ";
+		cin >> answerIn;
+		if (answerIn == answer)
+		{
+			cout << "              Correct"
+				 << endl;
+		}
+		else
+		{
+			cout << "              Incorrect"
+				 << endl;
+			break;
+		}
 
 		//qlibHold.append(qlibHold);
 		//if (i != (line - 1)) qlibHold.append("\n");
