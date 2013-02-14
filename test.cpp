@@ -37,12 +37,12 @@ int main()
 		cin >> answerIn;
 		if (answerIn == answer)
 		{
-			cout << "              Correct"
+			cout << "             Correct"
 				 << endl;
 		}
 		else
 		{
-			cout << "              Incorrect"
+			cout << "             Incorrect"
 				 << endl;
 			break;
 		}
